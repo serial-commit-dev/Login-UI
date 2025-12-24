@@ -8,11 +8,12 @@ function Submit() {
 
     if (Username === userName && Password === userPassword) {
         alert("Logged In!");
+        clearForm();
 
     }if (Username !== userName && Password !== userPassword) {
         document.getElementById('username-id').value = "Incorrect Username!";
         document.getElementById('password-id').value = "Incorrect Password!";
-        
+
 
     }if (Username !== userName && Password === userPassword){
         document.getElementById('username-id').value = "Incorrect Username!";
@@ -22,6 +23,8 @@ function Submit() {
 
         document.getElementById('password-id').value = "Incorrect Password!";
         
+    }if (Username === null && Password === null){
+        alert('Please fill out the form!');
     }
 }
 
